@@ -38,7 +38,7 @@
 					@foreach($newsitems->slice(0,3) as $newsitem)
 						
 						<h5><strong><a href="/news/{{$newsitem->id}}">{{$newsitem->news_heading}}</a></strong></h5>
-						<p><img src="img/news1.jpg" width="30%;" style="float: left; padding-right: 10px;">{{$newsitem->news_content}}</p><hr>
+						<p class="homepage-news"><img src="/storage/images/thumbnail/{{$newsitem->photo}}" width="30%;" style="float: left; padding-right: 10px;">{{$newsitem->news_content}}</p><hr>
 					@endforeach
 				@endif
 				<!--- start of tarkari bazzar -->

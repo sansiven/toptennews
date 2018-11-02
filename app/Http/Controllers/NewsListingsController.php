@@ -50,7 +50,16 @@ class NewsListingsController extends Controller
         
         //upload image
         $path = $request->file('photo')->storeAs('public/images', $filenameWithExt);
+        //added from youtube tutorial at https://www.youtube.com/watch?v=9ojIvwXXwV4
+        $request->file('photo')->storeAs('public/images/thumbnail', $filenameWithExt);
         
+        //Resize image here
+        $thumbnailpath = public_path('storage/images/thumbnail/'.$filenameWithExt);
+        $img = Image::make($thumbnailpath)->resize(400, 150, function($constraint) {
+            $constraint->aspectRatio();
+        });
+        $img->save($thumbnailpath);
+        //finished adding from tutorial
 
         //Create news
         $news = new News;
