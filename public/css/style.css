@@ -1,0 +1,67 @@
+.top{border: 2px solid #01388B; background: #CE1127; color:#fff; padding-bottom: -1px;}
+.top iframe{color: #fff !important; padding-top: 5px;}
+.topaccess ul{padding-top: 5px; text-align: center;}
+.topaccess ul li{list-style: none; display: inline;}
+.topsocial i{font-size: 20px; padding-top: 5px;}
+.topsocial a{text-decoration: none; color: #fff;}
+.fa-facebook-square:hover{color: #6775CF;}
+.fa-instagram:hover{color: #D788CA;}
+.fa-twitter-square:hover{color: #88D2D7;}
+.fa-youtube-square:hover{color: #F7F7F7;}
+.fa-google-plus-square:hover{color: #7C2126;}
+.language button{border: none; background: none; padding-top: 5px;}
+
+/* added css */
+.img-logo{height:100px; margin: 5px; padding: 5px}
+.search{margin-top: 30px;}
+
+.navbar-inverse{border-radius: 0px !important; background: #01388B; border: 2px solid #CE1127;}
+.navbar-brand{display: none;}
+.navbar-nav{padding-left: 150px;}
+.navbar-nav li a{color: #fff !important; font-size: 16px;}
+.nav > li > a:hover, .nav > li > a:focus, .nav .open > a,
+.nav .open > a:hover, .nav .open > a:focus{background: #CE1127 !important;}
+.dropdown-menu{background: #01388B;}
+.dropdown-menu li a{font-size: 14px;}
+.dropdown ul li:hover a{background: #CE1127;}
+.prov{margin-left: -930px;}
+.province{width: 1000px !important;}
+.province ul li{list-style-type: none; display: inline;}
+.province ul{word-spacing: 100px !important;}
+.province ul li{background: none !important;}
+.province ul:hover li a{background: none !important;}
+.province ul li:hover a{font-weight: bold !important;}
+.rightnews{padding-top: 30px;}
+.rightnews p{padding-left: 10px;}
+.red hr{border: 1.5px solid #CE1127; margin-top: -5px;}
+.blue hr{border: 1.5px solid #01388B; margin-top: -5px;}
+.newstab li:hover a, .newstab > li > a:focus{background: #fff !important;}
+.today p, .headnews p, .monodiv p, .litecture p, .entertainment p, .game p, .newscontent{font-size: 12px;}
+.red{color: #CE1127;}
+#pricetextdislpay, .tarkaritbl, .tblhead{width: 100% !important;}
+#pricetext{background: #7ED62A; padding: 5px;}
+#pricetextdislpay{background:#C9FBB4;}
+.tblhead{font-size: 12px;}
+.monodiv{float: left;}
+.browndiv{background: #F2F2F2;}
+.litecture, .entertainment{border: 1px solid #01388B;}
+.redd{background: #CE1127; padding: 20px; padding-bottom: 3px; color: #fff;}
+.bluee{background: #01388B; padding: 20px; padding-bottom: 3px; color: #fff;}
+.yellow{background: #A4A041; padding: 20px; padding-bottom: 3px; color: #fff;}
+.green{background: #3C9E41; padding: 20px; padding-bottom: 3px; color: #fff;}
+.phg{margin-top: 5px;}
+.photo, .game{border: 1px solid #CE1127;}
+.topic {margin-top: 0px;}
+.photost{float: left;}
+.photost img{height: 150px;}
+.dime{font-size: 10px !important;}
+.rasi{background: 	#5DBCD2; padding: 20px; color: #fff;}
+.gorkhapatra, .kantipur, .kathmandu, .annapurna, .saptahik{border: 1px solid #F2F2F2; padding: 10px; height: 380px;}
+.preeti{border: 1px solid #F2F2F2; padding: 20px;}
+.preeti button{width: 100%; text-align: center;}
+.name{padding-left: 10px;}
+.footer{background: #CE1127; color: #fff; border: 2px solid #01388B; padding-top: 30px; padding-bottom: 20px;}
+.copyright, .design{padding-top: 5px;}
+.breaking{border-top: 1px solid #000; border-bottom: 1px solid #000; padding-bottom: 5px; color: red;}
+.breaktitle{color: #fff; font-weight: bold; padding-top: 10px; background: #CE1127; padding-bottom: 13px;
+border-left: 5px solid #01388B;  text-align: center;}
