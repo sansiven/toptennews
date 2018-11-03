@@ -15,6 +15,14 @@
 .img-logo{height:100px; margin: 5px; padding: 5px}
 .search{margin-top: 30px;}
 
+.share_box{border-top: 1px solid #E9E9E9; border-bottom: 1px solid #E9E9E9; padding: 20px 0; display: flex;}
+.share_box label{float: left; font-size: 18px; margin-top: 5px;}
+.share_box .social_icons{list-style: none;}
+.social_icons li{float: left; padding: 0 15px 0 5px; font-size: x-large;}
+.social_icons .social_icon{display: block; width: 30px; height: 30px; background-repeat: none; background-position: 0 0; outline: none;}
+.box_header{background: #F0F0F0; border-left: 3px solid #CE1127; padding: 8px 15px 11px;}
+
+/* End of added css */
 .navbar-inverse{border-radius: 0px !important; background: #01388B; border: 2px solid #CE1127;}
 .navbar-brand{display: none;}
 .navbar-nav{padding-left: 150px;}
@@ -65,3 +73,5 @@
 .breaking{border-top: 1px solid #000; border-bottom: 1px solid #000; padding-bottom: 5px; color: red;}
 .breaktitle{color: #fff; font-weight: bold; padding-top: 10px; background: #CE1127; padding-bottom: 13px;
 border-left: 5px solid #01388B;  text-align: center;}
+
+
