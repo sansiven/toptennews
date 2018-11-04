@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\News;
 use Image;
+use App\Comment;
 
 class NewsListingsController extends Controller
 {
@@ -83,7 +84,18 @@ class NewsListingsController extends Controller
     public function show($id)
     {
         $news = News::find($id);
-        return view('shownews')->with('news', $news);
+
+        //to pass multiple variables in view use chained with or make an array and pass them 
+        /* 
+        $data = [ 
+            'name' => $name,
+            'id' => $id
+        ];
+        */
+        $comments = Comment::orderBy('news_id')
+                                    ->where('news_id', $id)
+                                    ->get();
+        return view('shownews')->with('news', $news)->with('news_id', $id)->with('comments', $comments);
 
     }
 
