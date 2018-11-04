@@ -43,10 +43,11 @@
             <h5 class="box_header">प्रतिक्रिया दिनुहोस</h5>
             <p class="padding_top_30">तपाईको इमेल गोप्य राखिनेछ !!</p>
             <div class="row">
-                {!! Form::open(['action' => 'NewsListingsController@store', 'method' => 'POST']) !!}    
+                {!! Form::open(['action' => 'CommentController@store', 'method' => 'POST']) !!}    
                     <div class="col-md-6">                   
                         {{Form::bsText('name','',['placeholder' => 'नाम (अनिवार्य)'])}}
                         {{Form::bsText('email','',['placeholder' => 'इमेल (अनिवार्य)'])}}
+                        {{Form::hidden('news_id', $news_id)}}
                     </div>  
                     <div class="col-md-6">
                         {{Form::bsTextArea('comment','',['placeholder' => 'प्रतिक्रिया दिनुहोस'])}}

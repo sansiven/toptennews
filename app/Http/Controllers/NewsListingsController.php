@@ -83,7 +83,15 @@ class NewsListingsController extends Controller
     public function show($id)
     {
         $news = News::find($id);
-        return view('shownews')->with('news', $news);
+
+        //to pass multiple variables in view use chained with or make an array and pass them 
+        /* 
+        $data = [ 
+            'name' => $name,
+            'id' => $id
+        ];
+        */
+        return view('shownews')->with('news', $news)->with('news_id', $id);
 
     }
 
