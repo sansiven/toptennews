@@ -36,25 +36,48 @@
                 </ul>
                 <span class="float-right"><p><a href="/news" class="float-right btn btn-default btn-sm">पछाडी जानुहोस्</a></p></span>
             </div>
+            <!-- Load comments section -->
+            <div class="container">
+                <div class="row comments-area">
+                    @if(count($comments))
+                    
+                    <div class="col-md-8">
+                    <p class="comments-header">प्रतिक्रियाहरु</p>
+                        @foreach($comments as $comment)
+                            <div class="comment">
+                                <p><strong>नाम: </strong>{{$comment->name}}</p>
+                                <p><strong>प्रतिक्रिया: </strong>{{$comment->comment}}</p>
+                                <br>
+                            </div>
+
+                        @endforeach
+                    </div>
+                    @endif
+                </div>
+            </div>
         </div>
 
         <!-- Add Comment Section -->
         <div class="row">
             <h5 class="box_header">प्रतिक्रिया दिनुहोस</h5>
             <p class="padding_top_30">तपाईको इमेल गोप्य राखिनेछ !!</p>
-            <div class="row">
-                {!! Form::open(['action' => 'CommentController@store', 'method' => 'POST']) !!}    
-                    <div class="col-md-6">                   
-                        {{Form::bsText('name','',['placeholder' => 'नाम (अनिवार्य)'])}}
-                        {{Form::bsText('email','',['placeholder' => 'इमेल (अनिवार्य)'])}}
+            <div id="comment-form" class="col-md-8">
+                <div class="row">
+                    {!! Form::open(['action' => 'CommentController@store', 'method' => 'POST']) !!}    
+                        <div class="col-md-6">                   
+                            {{Form::bsText('name','',['placeholder' => 'नाम (अनिवार्य)'])}}
+                        </div>  
+                        <div class="col-md-6">
+                            {{Form::bsText('email','',['placeholder' => 'इमेल (अनिवार्य)'])}}
+                        </div>
+                        <div class="col-md-12">
+                            {{Form::bsTextArea('comment','',['placeholder' => 'प्रतिक्रिया दिनुहोस'])}}
+                        </div>
                         {{Form::hidden('news_id', $news_id)}}
-                    </div>  
-                    <div class="col-md-6">
-                        {{Form::bsTextArea('comment','',['placeholder' => 'प्रतिक्रिया दिनुहोस'])}}
+                        {{Form::bsSubmit('submit',['class' => 'btn-outline-primary'])}}
                     </div>
-                    {{Form::bsSubmit('submit',['class' => 'btn-outline-primary'])}}
+                    {!! Form::close() !!}
                 </div>
-                {!! Form::close() !!}
             </div>
             
             <!-- <p class="padding_top_30" id="thank_you">प्रतिक्रिया दिनुभएकोमा धन्यवाद |</p>

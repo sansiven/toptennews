@@ -21,7 +21,7 @@
 .social_icons li{float: left; padding: 0 15px 0 5px; font-size: x-large;}
 .social_icons .social_icon{display: block; width: 30px; height: 30px; background-repeat: none; background-position: 0 0; outline: none;}
 .box_header{background: #F0F0F0; border-left: 3px solid #CE1127; padding: 8px 15px 11px;}
-
+.comments-header{background: #F0F0F0; border-left: 3px solid #01388B; padding: 8px 15px 11px; height: 35px;}
 /* End of added css */
 .navbar-inverse{border-radius: 0px !important; background: #01388B; border: 2px solid #CE1127;}
 .navbar-brand{display: none;}

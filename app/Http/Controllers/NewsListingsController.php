@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\News;
 use Image;
+use App\Comment;
 
 class NewsListingsController extends Controller
 {
@@ -91,7 +92,10 @@ class NewsListingsController extends Controller
             'id' => $id
         ];
         */
-        return view('shownews')->with('news', $news)->with('news_id', $id);
+        $comments = Comment::orderBy('news_id')
+                                    ->where('news_id', $id)
+                                    ->get();
+        return view('shownews')->with('news', $news)->with('news_id', $id)->with('comments', $comments);
 
     }
 

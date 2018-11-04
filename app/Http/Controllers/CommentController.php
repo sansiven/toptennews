@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Comment;
+use App\News;
+use Session;
 
 class CommentController extends Controller
 {
@@ -12,9 +14,10 @@ class CommentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(News $newsitem)
     {
-        //
+        //need to be changed
+        return response()->json($newsitem->comments()->with('name')->latest()->get());
     }
 
     /**
@@ -41,6 +44,7 @@ class CommentController extends Controller
             'comment' => 'required',
         ]);
 
+        
         //Create Comment
         $comment = new Comment;
         $comment->news_id = $request->input('news_id');
@@ -49,8 +53,11 @@ class CommentController extends Controller
         $comment->comment = $request->input('comment');
 
         $comment->save();
+
+        Session::flash('success', 'Comment was added');
         
         //redirect or reload or ajax
+        return redirect()->route('news.show', [$request->input('news_id')]);
     }
 
     /**
