@@ -17,7 +17,13 @@ class NewsListingsController extends Controller
     public function index()
     {
         $newsitems = News::orderBy('created_at', 'desc')->get();
-        return view('homepage')->with('newsitems', $newsitems);
+        $news_main_items = News::where('tags', 'main')->take(6)->get();
+        $news_sports_items = News::where('tags', 'sports')->take(3)->get();
+        $news_spiritual_items = News::where('tags', 'spiritual')->take(4)->get();
+        return view('homepage')->with('newsitems', $newsitems)
+                                ->with('news_main_items', $news_main_items)
+                                ->with('news_spiritual_items', $news_spiritual_items)
+                                ->with('news_sports_items', $news_sports_items);
     }
 
     /**
@@ -158,13 +164,13 @@ class NewsListingsController extends Controller
         $news = News::where('tags', 'breaking')->get();
         return $news;
     }
-
-    public function category($category=null)
+    //it is interfering with show function
+    /* public function category($category=null)
     {   
         if($category){
             $news = News::where('tags', $category)->get();
         }
         return $news;
-    }
+    } */
 
 }

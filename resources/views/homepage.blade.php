@@ -130,45 +130,14 @@
 				<hr>
 				<h4><strong>मुख्य समाचार</strong></h4>
 				<span class="red"><hr></span>
-				<img src="img/new1.jpg" width="30%;" style="float: left; padding-right: 10px">
-				<h5><strong><a href="#">ज्येष्ठ नागरिकलाई बचाउन सम्मान: प्रधानमन्त्री</a></strong></h5>
-				<p><span>२०७३ असार २ बिहीवार</span></p>
-				<p>प्रधानमन्त्री केपी ओलीले ज्येष्ठ नागरिकको सम्मानका लागि उनीहरूलाई...</p><hr>
-
-				<img src="img/new2.jpg" width="30%;" style="float: left; padding-right: 10px">
-				<h5><strong><a href="#">संसद्‌मा सत्ता पक्ष र प्रतिपक्षबीच जुहारी</a></strong></h5>
-				<p><span>२०७३ असार २ बिहीवार</span></p>
-				<p>भूकम्पपीडितलाई अनुदान, वितरण र पुनर्निर्माण सम्बन्धमा सत्ता पक्ष ...</p><hr>
-
-				<img src="img/new3.jpg" width="30%;" style="float: left; padding-right: 10px">
-				<h5><strong><a href="#">दुर्गमको चामल गोदाममै थन्कियो</a></strong></h5>
-				<p><span>२०७३ असार २ बिहीवार</span></p>
-				<p>दुर्गम र अति दुर्गमका बासिन्दाका लागि सरकारले उपलब्ध गराएको अनुद...</p><hr>
-
-
-				<img src="img/new4.jpg" width="30%;" style="float: left; padding-right: 10px">
-				<h5><strong><a href="#">पदाधिकारी नहुँदा महिला आयोग निष्क्रिय</a></strong></h5>
-				<p><span>२०७३ असार २ बिहीवार</span></p>
-				<p>राष्ट्रिय महिला आयोगकी कार्यवाहक अध्यक्ष भगवती घिमिरेले आयोग पदाध...</p><hr>
-
-
-				<img src="img/new5.jpg" width="30%;" style="float: left; padding-right: 10px">
-				<h5><strong><a href="#">राजधानीमा 'मोबाइल प्रहरी बिट'</a></strong></h5>
-				<p><span>२०७३ असार २ बिहीवार</span></p>
-				<p>उपत्यकामा प्रहरी जनशक्तिको अभाव खड्किएपछि महानगरीय प्रहरीले 'मोबा...</p><hr>
-
-			<img src="img/new6.jpg" width="30%;" style="float: left; padding-right: 10px">
-				<h5><strong><a href="#">एक लाख भूकम्पपीडितलाई दुई लाख अनुदान</a></strong></h5>
-				<p><span>२०७३ असार २ बिहीवार</span></p>
-				<p>सरकारले भूकम्पबाट प्रभावित एक लाख घरधनीसँग दुई लाख रुपैयाँ अनुदा...</p><hr>
-
-				<img src="img/new1.jpg" width="30%;" style="float: left; padding-right: 10px">
-				<h5><strong><a href="#">एक लाख भूकम्पपीडितलाई दुई लाख अनुदान</a></strong></h5>
-				<p><span>२०७३ असार २ बिहीवार</span></p>
-				<p>सरकारले भूकम्पबाट प्रभावित एक लाख घरधनीसँग दुई लाख रुपैयाँ अनुदा...</p><hr>
-
-
-				<p><img src="img/add2.gif" width="100%;"></p>
+				@if($news_main_items)
+					@foreach($news_main_items as $newsitem)
+						<img src="/storage/images/thumbnail/{{$newsitem->photo}}" width="30%;" style="float: left; padding-right: 10px;">
+						<h5><strong><a href="/news/{{$newsitem->id}}">{{$newsitem->news_heading}}</a></strong></h5>
+						<p><span>२०७३ असार २ बिहीवार</span></p>
+						<p>{{$newsitem->news_content}}</p><hr>
+					@endforeach
+				@endif
 			</div>
 
 		</div>
@@ -257,34 +226,19 @@
     		<div class="col-md-12 mano">
     			<hr><h4><strong>अध्यात्म/उत्प्रेरणा</strong></h4>
     			<span class="red"><hr></span>
-               <div class="col-md-3 monodiv">
-    			<img src="img/new1.jpg" width="50%;" style="float: left; padding-right: 10px">
-			    <h5><strong><a href="#">एक लाख भूकम्पपीडितलाई दुई लाख अनुदान</a></strong></h5>
-			   <p>सरकारले भूकम्पबाट प्रभावित एक लाख घरधनीसँग दुई लाख रुपैयाँ अनुदा...</p>
-			  </div>
-
-			  <div class="col-md-3 monodiv">
-    			<img src="img/new2.jpg" width="50%;" style="float: left; padding-right: 10px">
-			    <h5><strong><a href="#">एक लाख भूकम्पपीडितलाई दुई लाख अनुदान</a></strong></h5>
-			   <p>सरकारले भूकम्पबाट प्रभावित एक लाख घरधनीसँग दुई लाख रुपैयाँ अनुदा...</p>
-			  </div>
-
-			  <div class="col-md-3 monodiv">
-    			<img src="img/new3.jpg" width="50%;" style="float: left; padding-right: 10px">
-			    <h5><strong><a href="#">एक लाख भूकम्पपीडितलाई दुई लाख अनुदान</a></strong></h5>
-			   <p>सरकारले भूकम्पबाट प्रभावित एक लाख घरधनीसँग दुई लाख रुपैयाँ अनुदा...</p>
-			  </div>
-
-			  <div class="col-md-3 monodiv">
-    			<img src="img/new4.jpg" width="50%;" style="float: left; padding-right: 10px">
-			    <h5><strong><a href="#">एक लाख भूकम्पपीडितलाई दुई लाख अनुदान</a></strong></h5>
-			   <p>सरकारले भूकम्पबाट प्रभावित एक लाख घरधनीसँग दुई लाख रुपैयाँ अनुदा...</p>
-			  </div>
-              <p class="text-right"><a href="#"><button class="btn btn-default" style="border-color: red;">सबै हेर्नुहोस</button></a></p>
-              <hr>
+				@foreach($news_spiritual_items as $newsitem)
+					<div class="col-md-3 monodiv">
+						<img src="/storage/images/thumbnail/{{$newsitem->photo}}" width="50%;" style="float: left; padding-right: 10px">
+						<h5><strong><a href="/news/{{$newsitem->id}}">{{$newsitem->news_heading}}</a></strong></h5>
+					<p>{{$newsitem->news_content}}</p>
+					</div>
+				@endforeach
+			<p class="text-right"><a href="#"><button class="btn btn-default" style="border-color: red;">सबै हेर्नुहोस</button></a></p>
+			<hr>
 
     		</div>
     	</div>
+		<hr>
     </div>
 
    <div class="container">
@@ -374,23 +328,13 @@
 		   	 		</div>
 		   	 		<div class="col-md-6 game">
 		   	 			<h4 class="green"><strong> खेलकुद </strong> <hr style="margin-top: 5px;"></h4>
-		   	 			<img src="img/g1.jpg" width="40%;" style="float: left; padding-right: 10px">
-				         <h5><strong><a href="#">रियल मड्रिडलाई हराउँदै एथ्लेटिकोले जित्यो यूईएफए सुपर कप</a></strong></h5>
-				         <p class="dime"><i class="far fa-clock"></i> 16-Aug-2018</p>
-				         <p>रियल मड्रिडलाई पराजित गर्दै एथ्लेटिको मड्रिडले यूईएफए सुपर कपको उपाधि जितेको छ । क्रिष्टियानो रोनाल्डो ...</p>
-				         <hr style="border-color: red; margin-top: 1px;">
-
-
-				         <img src="img/g2.jpg" width="40%;" style="float: left; padding-right: 10px">
-				         <h5><strong><a href="#">एसियाली खेलकुदमा सहभागी हुन ७ करोड खर्च हुने</a></strong></h5>
-				         <p class="dime"><i class="far fa-clock"></i> 16-Aug-2018</p>
-				         <p>इन्डोनेसियामा आगामी भदौ २ गतेदेखि १७ गतेसम्म हुने एसियाली खेलकुद -एसियाड) को १८ औं संस्करणमा सहभागिता जनाउन ७ करोड रुपैयाँ खर्च हुने ...</p>
-				         <hr style="border-color: red; margin-top: 1px;">
-
-				         <img src="img/g3.jpg" width="40%;" style="float: left; padding-right: 10px">
-				         <h5><strong><a href="#">तेक्वान्दो खेलाडी भण्डारी ६१ हजारसहित सम्मानित</a></strong></h5>
-				         <p class="dime"><i class="far fa-clock"></i> 16-Aug-2018</p>
-				         <p>दक्षिण कोरियामा हालै सम्पन्न विश्व तेक्वान्दो कल्चर एक्स्पो प्रतियोगितामा स्वर्ण पदक विजेता तेक्वान्दो खेलाडी प्रेम भण्डारीलाई बाह्रविसे ...</p>
+		   	 			@foreach($news_sports_items as $newsitem)
+							<img src="/storage/images/thumbnail/{{$newsitem->photo}}" width="40%;" style="float: left; padding-right: 10px">
+							<h5><strong><a href="/news/{{$newsitem->id}}">{{$newsitem->news_heading}}</a></strong></h5>
+							<p class="dime"><i class="far fa-clock"></i> 16-Aug-2018</p>
+							<p>{{$newsitem->news_content}}</p>
+							<hr style="border-color: red; margin-top: 1px;">
+						@endforeach
 		   	 		</div>
 	   	 	      </div>
 	   	 	    </div>

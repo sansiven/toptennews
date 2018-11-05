@@ -22,6 +22,7 @@
 .social_icons .social_icon{display: block; width: 30px; height: 30px; background-repeat: none; background-position: 0 0; outline: none;}
 .box_header{background: #F0F0F0; border-left: 3px solid #CE1127; padding: 8px 15px 11px;}
 .comments-header{background: #F0F0F0; border-left: 3px solid #01388B; padding: 8px 15px 11px; height: 35px;}
+.mano{height:190px; overflow: hidden; padding: 10px;}
 /* End of added css */
 .navbar-inverse{border-radius: 0px !important; background: #01388B; border: 2px solid #CE1127;}
 .navbar-brand{display: none;}
