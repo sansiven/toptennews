@@ -159,4 +159,12 @@ class NewsListingsController extends Controller
         return $news;
     }
 
+    public function category($category=null)
+    {   
+        if($category){
+            $news = News::where('tags', $category)->get();
+        }
+        return $news;
+    }
+
 }
