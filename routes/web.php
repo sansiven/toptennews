@@ -15,7 +15,7 @@ Route::get('/', 'NewsListingsController@index');
 
 Auth::routes();
 
-//Route::get('news/{category}', 'NewsListingsController@category');
+Route::get('news/select/{category}', 'NewsListingsController@category');
 
 
 Route::resource('news', 'NewsListingsController');

@@ -164,13 +164,13 @@ class NewsListingsController extends Controller
         $news = News::where('tags', 'breaking')->get();
         return $news;
     }
-    //it is interfering with show function
-    /* public function category($category=null)
+    
+    public function category($category=null)
     {   
         if($category){
             $news = News::where('tags', $category)->get();
         }
-        return $news;
-    } */
+        return view('showcategory')->with('news', $news);
+    }
 
 }
