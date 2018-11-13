@@ -22,3 +22,4 @@ Route::resource('news', 'NewsListingsController');
 Route::resource('comments', 'CommentController');
 
 Route::get('/dashboard', 'DashboardController@index');
+Route::get('/admin', 'DashboardController@admin');

@@ -6,7 +6,7 @@
             <h2><a href="">{{$news->news_heading}}</a></h2>
                 <span class="blue"><hr></span>
                 <p><img src="/storage/images/{{$news->photo}}" width="100%;"></p>
-                <p>{{$news->news_content}}</p>
+                <div>{!! $news->news_content !!}</div>
         </div>
         <div class="col-md-4">
         

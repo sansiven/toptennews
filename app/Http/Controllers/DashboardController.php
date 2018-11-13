@@ -31,4 +31,9 @@ class DashboardController extends Controller
         $news = News::all();
         return view('dashboard')->with('news', $news);
     }
+
+    public function admin()
+    {
+        return view('admin_views/starter');
+    }
 }

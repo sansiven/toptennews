@@ -5,7 +5,6 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Edit News <a href="/dashboard" class="float-right btn btn-default btn-sm">Go Back</a></div>
-
                 <div class="card-body">
                     {!! Form::open(['action' => ['NewsListingsController@update', $news->id], 'method' => 'POST']) !!}
                         {{Form::bsText('news_heading',$news->news_heading,['placeholder' => 'News Heading'])}}

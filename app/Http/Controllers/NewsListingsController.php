@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\News;
 use Image;
 use App\Comment;
+use Purifier;
 
 class NewsListingsController extends Controller
 {
@@ -71,7 +72,7 @@ class NewsListingsController extends Controller
         //Create news
         $news = new News;
         $news->news_heading = $request->input('news_heading');
-        $news->news_content = $request->input('news_content');
+        $news->news_content = Purifier::clean($request->input('news_content'));
         $news->photo = $filenameWithExt;
         $news->tags = $request->input('tags');
 
@@ -135,7 +136,7 @@ class NewsListingsController extends Controller
         //Create news
         $news = News::find($id);
         $news->news_heading = $request->input('news_heading');
-        $news->news_content = $request->input('news_content');
+        $news->news_content = Purifier::clean($request->input('news_content'));
         $news->photo = $request->input('photo');
         $news->tags = $request->input('tags');
 

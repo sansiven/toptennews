@@ -31,7 +31,7 @@
                             @foreach($news as $item)
                                 <tr>
                                     <td>{{$item->news_heading}}</td>
-                                    <td>{{$item->news_content}}</td>
+                                    <td>{{ strip_tags($item->news_content)}}</td>
                                     <td>{{$item->tags}}</td>
                                     <td><a class="float-right btn btn-default" href="/news/{{$item->id}}/edit">Edit</a></td>
                                     <td>
