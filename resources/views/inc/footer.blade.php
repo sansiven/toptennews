@@ -2,50 +2,45 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 fotdiv">
-                <h4><strong>प्रधान सम्पादक</strong></h4>
+                <h4><strong>संचालक</strong></h4>
                 <hr>
-                <p class="name"> >> नाम</p>
+                <p class="name"> >> पुनम तिवारी</p>
+                <p class="name">     9849079658</p>
 
                 <p><strong>सम्पादक</strong></p>
-                <p class="name"> >> नाम</p>
+                <p class="name"> >> शोभा कार्की</p>
+                <p class="name">    9869101026</p>
             </div>
-
+            
             <div class="col-md-3 fotdiv">
-                <h4><strong>सम्पादन सहल्लाकर</strong></h4>
+                <h4><strong>सम्पादन सल्लाहकार </strong></h4>
                 <hr>
-                <p class="name"> >> नाम</p>
+                <p class="name"> >> भानुभक्त आचार्य </p>
+                <p class="name"> >> प्रकाश जङ्ग कार्की  </p>
+                <p class="name"> >> रामरिझन यादव</p>
 
-                <p><strong>कानुनी सहल्लाकर</strong></p>
+                <!-- <p><strong>कानुनी सहल्लाकर</strong></p>
                 <p class="name"> >> नाम</p>
 
                 <p><strong>बजार प्रबधक</strong></p>
-                <p class="name"> >> नाम</p>
+                <p class="name"> >> नाम</p> -->
             </div>
 
             <div class="col-md-3 fotdiv">
-                <h4><strong>फोटो पत्रकार / सम्बाददाता</strong></h4>
+                <h4><strong>रिपोर्टर </strong></h4>
                 <hr>
-                <p class="name"> >> नाम</p>
+                <p class="name"> >> जीवन कटुवाल </p>
 
-                <p><strong>युरोप  सम्बाददाता</strong></p>
-                <p class="name"> >> नाम</p>
-
-                <p><strong>अमेरिका सम्बाददाता</strong></p>
-                <p class="name"> >> नाम</p>
-
-                <p><strong>भारत सम्बाददाता</strong></p>
-                <p class="name"> >> नाम</p>
+                
             </div>
 
             <div class="col-md-3 fotdiv">
-                <h4><strong>प्रबन्ध निर्देशक (MD)</strong></h4>
-                <hr>
-                <p class="name"> >> नाम</p>
-                <hr style="border-color: #CE1127;">
-
                 <h4><strong>सम्पर्क</strong></h4>
                 <hr>
-                <p class="name"> >> नाम</p>
+                <p class="name"> >> toptenkhabar@gmail.com</p>
+                <p class="name">    9841718010 </p>
+                <p class="name">    9869101926 </p>
+                <p class="name"> Babarmahal, Kathmandu, Nepal</p>
             </div>
         </div>
     </div>

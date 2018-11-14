@@ -72,8 +72,9 @@
 				<li><a href="/news/select/money">अर्थव्यवसाय</a></li>
 				<li><a href="/news/select/sports">खेल</a></li>
 				<li><a href="/news/select/opinion">विचार/ब्लग</a></li>
-				<li><a href="/news/select/interview">जीवन/संघषॆ</a></li>
+				<li><a href="/news/select/interview">जीवन/संघर्ष</a></li>
 				<li><a href="/news/select/health">स्वास्थ्य</a></li>
+				<li><a href="/news/select/spiritual">अध्यात्म/उत्प्रेरणा</a></li>
 				<li><a href="/news/select/education">शिक्षा</a></li>
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">लोकसेवा खजना<span class="caret"></span></a>

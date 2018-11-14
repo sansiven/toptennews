@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">Dashboard 
                     <span class="float-right"> 
@@ -31,7 +31,7 @@
                             @foreach($news as $item)
                                 <tr>
                                     <td>{{$item->news_heading}}</td>
-                                    <td>{{ strip_tags($item->news_content)}}</td>
+                                    <td>{!! substr(strip_tags($item->news_content), 0, 100) !!}{{ strlen(strip_tags($item->news_content)) > 100 ? "..." : ""}}</td>
                                     <td>{{$item->tags}}</td>
                                     <td><a class="float-right btn btn-default" href="/news/{{$item->id}}/edit">Edit</a></td>
                                     <td>
@@ -44,6 +44,9 @@
                                 </tr>
                             @endforeach
                         </table>
+                        <div class="text-center">
+                        {!!$news->links(); !!}
+                        </div>
                     @endif
                 </div>
             </div>

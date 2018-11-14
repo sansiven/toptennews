@@ -28,7 +28,7 @@ class DashboardController extends Controller
         $user_id = auth()->user()->id;
 
         
-        $news = News::all();
+        $news = News::orderBy('id', 'desc')->paginate(5);
         return view('dashboard')->with('news', $news);
     }
 

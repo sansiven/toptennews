@@ -6,7 +6,13 @@
             <h2><a href="">{{$news->news_heading}}</a></h2>
                 <span class="blue"><hr></span>
                 <p><img src="/storage/images/{{$news->photo}}" width="100%;"></p>
-                <div>{!! $news->news_content !!}</div>
+                <div>{!! $news->news_content !!}
+                <br>
+                <dl class="dl-horizontal float-right">
+                    <dt>Created at:</dt>
+                    <dd>{{ date('M j, Y h:ia', strtotime($news->created_at))}}</dd>
+                </dl>
+                </div>
         </div>
         <div class="col-md-4">
         

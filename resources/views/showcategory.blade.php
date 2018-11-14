@@ -1,4 +1,5 @@
 @extends('layouts.home')
+@section('title', "{{$category}}")
 
 @section('content')
     <main role="main" class="main">

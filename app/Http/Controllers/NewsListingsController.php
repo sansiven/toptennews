@@ -171,7 +171,7 @@ class NewsListingsController extends Controller
         if($category){
             $news = News::where('tags', $category)->get();
         }
-        return view('showcategory')->with('news', $news);
+        return view('showcategory')->with('news', $news)->with('category', $category);
     }
 
 }

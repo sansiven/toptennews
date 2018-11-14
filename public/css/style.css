@@ -48,7 +48,7 @@ p.card-text{margin-bottom:0;height:60px; overflow:hidden;}
 /* End of added css */
 .navbar-inverse{border-radius: 0px !important; background: #01388B; border: 2px solid #CE1127;}
 .navbar-brand{display: none;}
-.navbar-nav{padding-left: 150px;}
+.navbar-nav{padding-left: 75px;}
 .navbar-nav li a{color: #fff !important; font-size: 16px;}
 .nav > li > a:hover, .nav > li > a:focus, .nav .open > a,
 .nav .open > a:hover, .nav .open > a:focus{background: #CE1127 !important;}
