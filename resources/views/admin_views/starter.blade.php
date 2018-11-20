@@ -260,7 +260,7 @@ desired effect
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="/news/create"><i class="fa fa-link"></i> <span>Add</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+        <li><a href="{{ route('categories.index') }}"><i class="fa fa-link"></i> <span>Category</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Add News</span>
             <span class="pull-right-container">
@@ -294,7 +294,7 @@ desired effect
 
     <!-- Main content -->
     <section class="content container-fluid">
-
+    @include('inc.messages')
       <!--------------------------
         | Your Page Content Here |
         -------------------------->

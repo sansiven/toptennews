@@ -26,9 +26,17 @@
                             }
                             }	);
                         </script>
-                        <p>Photo:</p>
+                        {{ Form::label('photo', 'Photo:')}}
                         {{Form::file('photo')}}
-                        {{Form::bsText('tags','',['placeholder' => 'Tags such as breaking, sports, politics, interview'])}}
+                        <br>
+                        {{ Form::label('category_id', 'Category:') }}
+                        <select name="category_id" class="form-control">
+                            @foreach($categories as $category)
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+                        </select>
+                        <br>
+                        
                         {{Form::bsSubmit('submit',['class' => 'btn-outline-success'])}}
                     {!! Form::close() !!}
                 </div>

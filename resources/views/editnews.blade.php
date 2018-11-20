@@ -10,9 +10,12 @@
                     {!! Form::model($news, ['action' => ['NewsListingsController@update', $news->id], 'method' => 'POST']) !!}
                         {{Form::bsText('news_heading',null,['placeholder' => 'News Heading'])}}
                         {{Form::bsTextArea('news_content',null,['placeholder' => 'News Detail'])}}
-                        <p>Photo:</p>
+                        {{ Form::label('photo', 'Photo:')}}
                         {{Form::file('photo')}}
-                        {{Form::bsText('tags',null,['placeholder' => 'Tags such as breaking, sports, politics, interview'])}}
+                        <br>
+                        {{ Form::label('category_id', 'Category:') }}
+                        {{ Form::select('category_id', $categories, null, ['class' => 'form-control']) }}
+                        <br>
                         {{Form::bsSubmit('submit',['class' => 'btn-outline-success'])}}
                         {{Form::hidden('_method', 'PUT')}}
                     {!! Form::close() !!}

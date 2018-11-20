@@ -21,5 +21,9 @@ Route::get('news/select/{category}', 'NewsListingsController@category');
 Route::resource('news', 'NewsListingsController');
 Route::resource('comments', 'CommentController');
 
+//CAtegories
+Route::resource('categories', 'CategoryController', ['except' => ['create']]);
+//
+
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/admin', 'DashboardController@admin');

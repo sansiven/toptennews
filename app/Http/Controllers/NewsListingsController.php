@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\News;
 use Image;
 use App\Comment;
+use App\Category;
 use Purifier;
 
 class NewsListingsController extends Controller
@@ -34,7 +35,8 @@ class NewsListingsController extends Controller
      */
     public function create()
     {
-        return view('createnews');
+        $categories = Category::all();
+        return view('createnews')->with('categories', $categories);
     }
 
     /**
@@ -48,7 +50,7 @@ class NewsListingsController extends Controller
         $this->validate($request,[
             'news_heading' => 'required',
             'news_content' => 'required',
-            'tags' => 'required',
+            'category_id' => 'required|integer',
             'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
@@ -74,7 +76,7 @@ class NewsListingsController extends Controller
         $news->news_heading = $request->input('news_heading');
         $news->news_content = Purifier::clean($request->input('news_content'));
         $news->photo = $filenameWithExt;
-        $news->tags = $request->input('tags');
+        $news->category_id = $request->input('category_id');
 
         //save to database
         $news->save();
@@ -115,7 +117,12 @@ class NewsListingsController extends Controller
     public function edit($id)
     {
         $news = News::find($id);
-        return view('editnews')->with('news', $news);
+        $categories = Category::all();
+        $cats = array();
+        foreach ($categories as $category) {
+            $cats[$category->id] = $category->name;
+        }
+        return view('editnews')->with('news', $news)->withCategories($cats);
     }
 
     /**
@@ -130,7 +137,8 @@ class NewsListingsController extends Controller
         $this->validate($request,[
             'news_heading' => 'required',
             'news_content' => 'required',
-            'tags' => 'required'
+            'category_id' => 'required|integer',
+            'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
         //Create news
@@ -138,7 +146,7 @@ class NewsListingsController extends Controller
         $news->news_heading = $request->input('news_heading');
         $news->news_content = Purifier::clean($request->input('news_content'));
         $news->photo = $request->input('photo');
-        $news->tags = $request->input('tags');
+        $news->category_id = $request->input('category_id');
 
         //save to database
         $news->save();

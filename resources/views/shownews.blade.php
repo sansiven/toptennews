@@ -12,6 +12,8 @@
                     <dt>Created at:</dt>
                     <dd>{{ date('M j, Y h:ia', strtotime($news->created_at))}}</dd>
                 </dl>
+                <hr>
+                <p>Posted In: {{$news->category->name}}</p>
                 </div>
         </div>
         <div class="col-md-4">
