@@ -23,7 +23,9 @@ Route::resource('comments', 'CommentController');
 
 //CAtegories
 Route::resource('categories', 'CategoryController', ['except' => ['create']]);
-//
+
+//tags
+Route::resource('tags', 'TagController', ['except' => ['create']]);
 
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/admin', 'DashboardController@admin');
