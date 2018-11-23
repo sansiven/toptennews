@@ -61,11 +61,11 @@ desired effect
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="/admin" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>T</b>TK</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>Top10</b>News</span>
     </a>
 
     <!-- Header Navbar -->
@@ -180,7 +180,7 @@ desired effect
               <!-- The user image in the navbar-->
               <img src="{{ asset('img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">{{ Auth::user()->name }}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -238,7 +238,7 @@ desired effect
           <img src="{{ asset('img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>{{ Auth::user()->name }}</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
@@ -258,9 +258,8 @@ desired effect
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">HEADER</li>
+        <li class="header">OPTIONS</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="/news/create"><i class="fa fa-link"></i> <span>Add</span></a></li>
         <li><a href="{{ route('categories.index') }}"><i class="fa fa-link"></i> <span>Category</span></a></li>
         <li><a href="{{ route('tags.index') }}"><i class="fa fa-link"></i> <span>Tags</span></a></li>
         <li class="treeview">
@@ -270,8 +269,8 @@ desired effect
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Add News</a></li>
-            <li><a href="#">Edit News</a></li>
+            <li><a href="/dashboard">View all News</a></li>
+            <li><a href="/news/create">Add News</a></li>
           </ul>
         </li>
       </ul>

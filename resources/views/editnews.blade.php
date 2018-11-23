@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8 col-md-offset-1">
             <div class="card">
             <!-- Form model binding way of editing things in laravel -->
                 <div class="card-header">Edit News <a href="/dashboard" class="float-right btn btn-default btn-sm">Go Back</a></div>

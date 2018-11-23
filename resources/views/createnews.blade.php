@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8 col-md-offset-1">
             <div class="card">
                 <div class="card-header">Create News <a href="/dashboard" class="float-right btn btn-default btn-sm">Go Back</a></div>
                 <script src={{ URL::asset("ckeditor/ckeditor.js") }}></script>

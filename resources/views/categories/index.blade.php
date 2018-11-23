@@ -1,6 +1,6 @@
 @extends('admin_views.starter')
 
-@section('title', '|Categories')
+@section('title', '| Categories')
 @section('content')
 
     <div class="row">
