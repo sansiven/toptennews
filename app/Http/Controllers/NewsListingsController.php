@@ -7,6 +7,7 @@ use App\News;
 use Image;
 use App\Comment;
 use App\Category;
+use App\Tag;
 use Purifier;
 
 class NewsListingsController extends Controller
@@ -36,7 +37,8 @@ class NewsListingsController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('createnews')->with('categories', $categories);
+        $tags = Tag::all();
+        return view('createnews')->with('categories', $categories)->withTags($tags);
     }
 
     /**
@@ -47,10 +49,12 @@ class NewsListingsController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request); 
         $this->validate($request,[
             'news_heading' => 'required',
             'news_content' => 'required',
             'category_id' => 'required|integer',
+            'tag_id' => 'required',
             'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
@@ -80,7 +84,8 @@ class NewsListingsController extends Controller
 
         //save to database
         $news->save();
-
+        //attach associations after saving
+        $post->tags()->sync($request->tags, false);
         return  redirect('/dashboard')->with('success', 'News Added');
     }
 
@@ -122,7 +127,13 @@ class NewsListingsController extends Controller
         foreach ($categories as $category) {
             $cats[$category->id] = $category->name;
         }
-        return view('editnews')->with('news', $news)->withCategories($cats);
+
+        $tags = Tag::all();
+        $tags2 = array();
+        foreach($tags as $tag) {
+            $tags2[$tag->id] = $tag->name;
+        }
+        return view('editnews')->with('news', $news)->withCategories($cats)->withTags($tags2);
     }
 
     /**
@@ -151,6 +162,13 @@ class NewsListingsController extends Controller
         //save to database
         $news->save();
 
+        if(isset($request->tags)) {
+            $news->tags()->sync($request->tags, true);
+        }
+        else{
+            $news->tags()->sync(array());
+        }
+
         return  redirect('/dashboard')->with('success', 'News Updated');
 
     }
@@ -164,6 +182,7 @@ class NewsListingsController extends Controller
     public function destroy($id)
     {
         $news = News::find($id);
+        $news->tags()->detach();
         $news->delete();
         return  redirect('/dashboard')->with('success', 'News Deleted');
     }

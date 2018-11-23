@@ -7,6 +7,12 @@
                 <span class="blue"><hr></span>
                 <p><img src="/storage/images/{{$news->photo}}" width="100%;"></p>
                 <div>{!! $news->news_content !!}
+                <hr>
+                <div class="tags">
+                @foreach($post->tags as $tag)
+                    <span class="label label-default">{{ $tag->name }}</span>
+                @endforeach
+                </div>
                 <br>
                 <dl class="dl-horizontal float-right">
                     <dt>Created at:</dt>

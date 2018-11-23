@@ -1,5 +1,11 @@
 @extends('admin_views.starter')
 
+@section('title', '| Add news')
+
+@section('stylesheets')
+    {!! Html::style('css/select2.min.css') !!}
+@endsection
+
 @section('content')
 <div class="row justify-content-center">
         <div class="col-md-8">
@@ -36,6 +42,15 @@
                             @endforeach
                         </select>
                         <br>
+
+                        {{ Form::label('tags', 'Tags:') }}
+                        <select name="tags[]" class="form-control select2-multi" multiple="multiple">
+                            @foreach($tags as $tag)
+                                <option value="{{$tag->id}}">{{$tag->name}}</option>
+                            @endforeach
+                        </select>
+                        <br>
+                        <br>
                         
                         {{Form::bsSubmit('submit',['class' => 'btn-outline-success'])}}
                     {!! Form::close() !!}
@@ -44,4 +59,11 @@
         </div>
     </div>
 
+@endsection
+
+@section('javascripts')
+    {!!Html::script('js/select2.min.js')!!} 
+    <script type="text/javascript">
+        $('.select2-multi').select2();
+    </script>
 @endsection

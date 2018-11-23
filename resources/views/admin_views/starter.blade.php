@@ -32,6 +32,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  @yield('stylesheets')
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -263,14 +264,14 @@ desired effect
         <li><a href="{{ route('categories.index') }}"><i class="fa fa-link"></i> <span>Category</span></a></li>
         <li><a href="{{ route('tags.index') }}"><i class="fa fa-link"></i> <span>Tags</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Add News</span>
+          <a href="#"><i class="fa fa-link"></i> <span>News</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Breaking News</a></li>
-            <li><a href="#">Sports News</a></li>
+            <li><a href="#">Add News</a></li>
+            <li><a href="#">Edit News</a></li>
           </ul>
         </li>
       </ul>
@@ -404,7 +405,7 @@ desired effect
 <script src="/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/js/adminlte.min.js"></script>
-
+@yield("javascripts")
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
